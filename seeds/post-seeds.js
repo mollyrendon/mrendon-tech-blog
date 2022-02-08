@@ -1,5 +1,9 @@
+/*Required Connections*/
 const { Post } = require("../models");
 
+/*Post Data:
+This code creates the posts in the database.
+*/
 const postData = [
   {
     title: "Fusce non erat dapibus",

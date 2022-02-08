@@ -1,5 +1,9 @@
+/*Required Connections*/
 const { Comment } = require("../models");
 
+/*Comment Data:
+This code creates comments in the database.
+*/
 const commentData = [
   {
     comment_text: "Testing Comment number 1",

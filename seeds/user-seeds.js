@@ -1,5 +1,9 @@
+/*Required Connections*/
 const { User } = require("../models");
 
+/*User Data:
+This code creates users in the database.
+*/
 const userData = [
   {
     username: "bilbo_baggins",
