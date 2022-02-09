@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 
 
 /*Find All Function:
-
+This code is used to find all of the posts in the database and return them to the user.  
 */
 
 router.get('/', (req, res) => {
@@ -43,8 +43,8 @@ router.get('/', (req, res) => {
 
 });
 
-/*Edit Function:
-
+/*Find One Function:
+This code is used to find a post with a specified id.  If there is not post with that specific id then a 404 error message is sent back.  If the post with that id is found then it is returned to the user.
 */
 
 router.get('/:id', (req, res) => {
@@ -86,7 +86,7 @@ router.get('/:id', (req, res) => {
 
 
 /*Create Function:
-
+This code is used to create a post.  The code first checks to see if there is already a post with the specified id.  If there is not it creates the new post.  
 */
 router.post('/', withAuth, (req, res) => {
     Post.create({
@@ -103,7 +103,7 @@ router.post('/', withAuth, (req, res) => {
 
 
 /*Update Function:
-
+This code is used to update a post.  The code first checks to see if there is already a user with a specific id.  If there is not a post with that specific id then a 404 error message appears. If there is a post that matches that specific id then the post is then updated. 
 */
 router.put('/:id', withAuth, (req, res) => {
     Post.update({
@@ -127,7 +127,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 /*Delete Function:
-
+This code is used to delete a post.  The code first checks to see if there is already a post with a specific id.  If there is not post with that specific id then a 404 error message appears.  If there is a post that matches that id then the post is deleted. 
 */
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
