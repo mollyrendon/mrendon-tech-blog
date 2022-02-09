@@ -5,8 +5,8 @@ const { Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 
-/*Fine All Comments Function:
-  
+/*Find All Comments Function:
+  This code is used to find all of the comments in the database and return them to the user. 
 */
 router.get("/", (req, res) => {
   Comment.findAll({})
@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 
 
 /*Find One Comment Function:
-  
+  This code is used to find a comment with a specific id.  
 */
 router.get("/:id", (req, res) => {
   Comment.findAll({
@@ -36,7 +36,7 @@ router.get("/:id", (req, res) => {
 
 
 /*Create Comment Function:
-  
+  This code is used to create a comment.  
 */
 router.post("/", withAuth, (req, res) => {
   if (req.session) {
@@ -55,7 +55,7 @@ router.post("/", withAuth, (req, res) => {
 });
 
 /*Update Comment Function:
-  
+  This code is used to update a comment.  It first check to see if there is already an existing comment with a specific id.  If there is not then a 404 error message appears.  If there is a comment with that specific id then the data is returned and the user can update the comment.
 */
 router.put("/:id", withAuth, (req, res) => {
   Comment.update(
@@ -85,7 +85,7 @@ router.put("/:id", withAuth, (req, res) => {
 
 
 /*Delete Comment Function:
-  
+  This code is used to delete a comment.  It first check to see if there is already an existing comment with a specific id.  If there is not then a 404 error message appears.  If there is a comment with that specific id then the data is returned and the user can delete the comment.
 */
 router.delete("/:id", withAuth, (req, res) => {
   Comment.destroy({
