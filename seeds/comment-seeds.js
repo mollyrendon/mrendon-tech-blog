@@ -18,8 +18,8 @@ const commentData = [
   {
     comment_text: "Testing comment number 3",
     user_id: 3,
-    post_id: 3,
-  },
+    post_id: 3
+  }
 ];
 
 const seedComments = () => Comment.bulkCreate(commentData);

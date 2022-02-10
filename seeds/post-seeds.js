@@ -21,8 +21,8 @@ const postData = [
     title: "Curabitur non finibus tortor",
     content:
       "urabitur aliquam hendrerit leo, eget ultrices dui commodo vitae. Nulla sodales quam eget orci dignissim euismod. Phasellus sodales pellentesque tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. ",
-    user_id: 3,
-  },
+    user_id: 3
+  }
 ];
 
 const seedPosts = () => Post.bulkCreate(postData);
