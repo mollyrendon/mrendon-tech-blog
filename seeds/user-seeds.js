@@ -6,17 +6,17 @@ This code creates users in the database.
 */
 const userData = [
   {
-    username: "bilbo_baggins",
+    username: "bilbobaggins",
     password: "shire",
   },
 
   {
-    username: "diana_prince",
+    username: "dianaprince",
     password: "lasso",
   },
 
   {
-    username: "vlad_dracula",
+    username: "vladdracula",
     password: "stake"
   }
 ];
