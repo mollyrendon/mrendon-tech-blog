@@ -69,13 +69,13 @@ router.get("/post/:id", (req, res) => {
         include: {
           model: User,
           attributes: ["username"],
-        },
+        }
       },
       {
         model: User,
         attributes: ["username"],
-      },
-    ],
+      }
+    ]
   })
     .then((dbPostData) => {
       if (!dbPostData) {
@@ -83,6 +83,7 @@ router.get("/post/:id", (req, res) => {
         return;
       }
       const post = dbPostData.get({ plain: true });
+      console.log(post);
       res.render("single-post", { post, loggedIn: req.session, loggedIn });
     })
     .catch((err) => {
