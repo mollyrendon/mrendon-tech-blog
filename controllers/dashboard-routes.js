@@ -70,7 +70,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
         res.status(404).json({ message: "There is not a post with this id" });
         return;
       }
-      const post = dbPostData.get({ plain: ture });
+      const post = dbPostData.get({ plain: true });
       res.render("edit-post", { post, loggedIn: true });
     })
     .catch((err) => {
