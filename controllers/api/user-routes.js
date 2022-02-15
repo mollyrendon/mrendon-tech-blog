@@ -115,10 +115,10 @@ router.post('/login', (req, res) => {
 });
 
 /*Logout Function:
-This code is used to allow the user to logout of the site, destorying the session.  
+This code is used to allow the user to logout of the site, destroying the session.  
 */
 
-router.post('logout', (req, res) => {
+router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
